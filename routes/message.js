@@ -24,7 +24,7 @@ exports.post = function(request, response) {
         from: email, // sender address 
         to: 'longpham91@gmail.com', // list of receivers 
         subject: 'Website Contact Form: ' + name, // Subject line
-        text: 'You have received a new message from your website contact form.\n\nHere are the details:\n\nName: '+ name + '\n\nEmail: ' + email + '\n\nPhone: '+ phone + '\n\nMessage:\n ' + message
+        html: 'You have received a new message from your website contact form.<br /><br />Here are the details:<br /><br /><strong>Name</strong>: '+ name + '<br /><br /><strong>Email</strong>: ' + email + '<br /><br /><strong>Phone</strong>: ' + phone + '<br /><br /><strong>Message</strong>:<br />' + message
     };
     
     smtpTransport.sendMail(mailOptions, function(error, info){
