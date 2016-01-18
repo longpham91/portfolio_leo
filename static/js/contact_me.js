@@ -29,7 +29,8 @@ $(function() {
             $.ajax({
                 url: "/api/v1/message",
                 type: "POST",
-                data: jsonData,
+                dataType: 'json'
+                data: JSON.stringify(jsonData),
                 contentType: 'application/json',
                 cache: false,
                 success: function() {
