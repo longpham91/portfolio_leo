@@ -1,5 +1,6 @@
 var express      = require('express');
 var app          = express();
+var favicon      = require('serve-favicon');
 var router       = express.Router();
 var bodyParser   = require('body-parser');
 var MessageController = require('./routes/message');
@@ -8,7 +9,7 @@ var MessageController = require('./routes/message');
  * Routing & middlewares
  */
 app.use(express.static(__dirname + '/static'));
-app.use(express.favicon(__dirname + '/favicon.ico'))
+app.use(favicon(__dirname + '/favicon.ico'))
 app.use(bodyParser.json({ extended: true }));
 app.use(router);
 
