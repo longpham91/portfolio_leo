@@ -5,8 +5,10 @@ exports.post = function(request, response) {
         return response.status(500).json({ success: false, data: 'No argements provided!'});
     }
     
-    var smtpTransport = nodemailer.createTransport("SMTP",{
-        service: "Gmail",
+    var smtpTransport = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true, // use SSL
         auth: {
             user: "longpham91@gmail.com",
             pass: "BerlinSaigon26121991"

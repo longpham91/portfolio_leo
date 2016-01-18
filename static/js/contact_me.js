@@ -29,7 +29,7 @@ $(function() {
             $.ajax({
                 url: "/api/v1/message",
                 type: "POST",
-                dataType: 'json'
+                dataType: 'json',
                 data: JSON.stringify(jsonData),
                 contentType: 'application/json',
                 cache: false,
