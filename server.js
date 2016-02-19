@@ -9,7 +9,7 @@ var MessageController = require('./routes/message');
  * Routing & middlewares
  */
 app.use(express.static(__dirname + '/static'));
-app.use(favicon(__dirname + '/favicon.ico'))
+app.use(favicon(__dirname + '/favicon.ico'));
 app.use(bodyParser.json({ extended: true }));
 app.use(router);
 

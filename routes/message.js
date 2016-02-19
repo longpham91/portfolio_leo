@@ -2,7 +2,7 @@ var nodemailer = require('nodemailer');
 
 exports.post = function(request, response) {
     if ((!request.body.name) || (!request.body.email) || (!request.body.phone) || (!request.body.message)) {
-        return response.status(500).json({ success: false, data: 'No argements provided!'});
+        return response.status(500).json({ success: false, data: 'No arguments provided!'});
     }
     
     var smtpTransport = nodemailer.createTransport({
